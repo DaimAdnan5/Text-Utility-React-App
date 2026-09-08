@@ -1,0 +1,133 @@
+.App {
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem clamp(1.25rem, 5vw, 5rem);
+  background: #172033;
+  color: #fff;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.navbar-tabs {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.navbar-tab {
+  padding: 0.55rem 0.9rem;
+  border-radius: 0.4rem;
+  color: #c9d1e3;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.navbar-tab:hover,
+.navbar-tab:focus-visible,
+.navbar-tab-active {
+  background: #fff;
+  color: #172033;
+  outline: none;
+}
+
+.text-form {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.text-form h1 {
+  margin: 0 0 1.5rem;
+  font-size: 1.75rem;
+}
+
+.text-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.text-form textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 12rem;
+  padding: 0.85rem;
+  border: 1px solid #c9d1e3;
+  border-radius: 0.4rem;
+  background: #fff;
+  color: #172033;
+  font: inherit;
+  resize: vertical;
+}
+
+.text-form textarea:focus {
+  border-color: #3867d6;
+  outline: 3px solid rgba(56, 103, 214, 0.2);
+}
+
+.text-form-summary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  color: #59657a;
+  font-size: 0.9rem;
+}
+
+.text-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.text-form-actions button {
+  padding: 0.55rem 0.9rem;
+  border: 0;
+  border-radius: 0.4rem;
+  background: #172033;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+}
+
+.text-form-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.text-form-actions button:not(:disabled):hover,
+.text-form-actions button:not(:disabled):focus-visible {
+  background: #3867d6;
+}
+
+@media (max-width: 520px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .navbar-tabs {
+    width: 100%;
+  }
+
+  .navbar-tab {
+    flex: 1;
+    text-align: center;
+  }
+}
