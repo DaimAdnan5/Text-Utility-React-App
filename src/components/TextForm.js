@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function TextForm() {
+export default function TextForm({ onSuccess }) {
   const [text, setText] = useState('')
 
   const handleChange = (event) => {
@@ -9,18 +9,22 @@ export default function TextForm() {
 
   const handleCapitalize = () => {
     setText(text.toLowerCase().replace(/\b\w/g, (character) => character.toUpperCase()))
+    onSuccess('Text capitalized successfully.')
   }
 
   const handleUppercase = () => {
     setText(text.toUpperCase())
+    onSuccess('Text converted to uppercase successfully.')
   }
 
   const handleLowercase = () => {
     setText(text.toLowerCase())
+    onSuccess('Text converted to lowercase successfully.')
   }
 
   const handleClear = () => {
     setText('')
+    onSuccess('Text cleared successfully.')
   }
 
   const wordCount = text.trim() ? text.trim().split(/\s+/).length : 0
