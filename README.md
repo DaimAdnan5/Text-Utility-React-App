@@ -44,6 +44,21 @@ A simple React text utility app for practicing React components, state, and even
 | `npm start` | Runs the app in development mode. |
 | `npm test` | Runs the test suite. |
 | `npm run build` | Creates an optimized production build. |
+| `npm run deploy` | Builds the app and publishes `build/` to the `gh-pages` branch. |
+
+### Deploy to GitHub Pages
+
+The repository is configured for the project site at:
+
+<https://daimadnan5.github.io/Text-Utility-React-App>
+
+After installing dependencies, deploy with:
+
+```bash
+npm run deploy
+```
+
+In GitHub, open **Settings > Pages** and set the source to the `gh-pages` branch and its `/ (root)` folder.
 
 ## Project Structure
 
